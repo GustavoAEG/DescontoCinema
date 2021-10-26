@@ -14,11 +14,18 @@ Abaixo de 5 anos        60% de Desconto
 Acima de 60 anos       55% Discount
 
 
+3 - Codifique o app para calcular o preço correto do ingresso com base na idade e mostre esse
+ retorno para o usuário.
+4 - Caso o usuário não tenha desconto, crie um sistema para a quantidade de ingressos que ele quer e,
+ se ele comprar dois ingressos ou mais, terá um desconto de 30% em cada um.
+
  */
 
 
     var idade = 0
     var ingresso = 18.0
+    var qtde_ingresso =0
+    var total=0.0
 
     println("Informe idade")
     idade = readLine()!!.toInt()
@@ -30,9 +37,15 @@ Acima de 60 anos       55% Discount
 
         println("Desconto de ${ingresso * 0.55}")
     } else {
-        println("Sem desconto")
+        println("Informe quantos ingressos deseja")
+        qtde_ingresso = readLine()!!.toInt()
     }
 
+    if (qtde_ingresso >= 2) {
+        println("Desconto de ${ingresso*0.3}")
+        total= ingresso+ingresso*0.3
+        println("total de ${total}")
+    }
 
 
 
